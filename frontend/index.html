@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RentMove Design Services</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">RentMove Design</div>
+      <nav>
+        <button id="signupBtn" class="btn primary">Sign Up / Login</button>
+        <button id="contactBtn" class="btn secondary">Contact Us</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="landing" class="panel landing active">
+        <h1>Full-Stack Rental, Moving, Packing & Interior Design Services</h1>
+        <p>
+          We help you move smarter and settle faster. From property transition planning and safe packing to
+          transport coordination and end-to-end interior styling, our team manages every stage of your rental
+          journey with transparent pricing, trusted professionals, and personalized service packages.
+        </p>
+        <ul>
+          <li>End-to-end move planning with flexible schedules</li>
+          <li>Professional packing and handling of fragile goods</li>
+          <li>Interior setup, furnishing guidance, and space optimization</li>
+        </ul>
+      </section>
+
+      <section id="auth" class="panel auth">
+        <h2>Sign Up / Sign In</h2>
+        <p>Choose a fast and secure sign-in option.</p>
+        <div class="auth-options">
+          <button id="googleAuthBtn" class="btn primary">Continue with Google</button>
+          <div class="phone-auth">
+            <h3>Continue with Phone + OTP</h3>
+            <form id="phoneAuthForm">
+              <label>
+                Phone Number
+                <input type="tel" id="phoneNumber" placeholder="+1 555 123 4567" required />
+              </label>
+              <div class="otp-row">
+                <button type="button" id="sendOtpBtn" class="btn secondary">Send OTP</button>
+                <input type="text" id="otpCode" placeholder="Enter OTP" maxlength="6" disabled required />
+                <button type="submit" id="verifyOtpBtn" class="btn primary" disabled>Verify & Login</button>
+              </div>
+            </form>
+            <small id="otpStatus" class="muted"></small>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="panel dashboard">
+        <aside class="sidebar">
+          <h3>Dashboard</h3>
+          <ul>
+            <li class="tab active">Home</li>
+            <li class="tab">Bookings</li>
+            <li class="tab">Properties</li>
+            <li class="tab">Payments</li>
+            <li class="tab">Profile</li>
+          </ul>
+        </aside>
+        <div class="dashboard-content">
+          <h2>Welcome back!</h2>
+          <p>You are signed in. Use the left navigation tabs to manage your rental services.</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="contactDialog">
+      <form id="contactForm" method="dialog" class="contact-form">
+        <h2>Contact Us</h2>
+        <label>Full Name <input type="text" name="name" required /></label>
+        <label>Email ID <input type="email" name="email" required /></label>
+        <label>Phone Number <input type="tel" name="phone" required /></label>
+        <label>Property (Moving To) <input type="text" name="property" required /></label>
+        <label>Tentative Date <input type="date" name="tentativeDate" required /></label>
+        <label>Tentative Rental Amount <input type="number" min="0" step="0.01" name="tentativeAmount" required /></label>
+        <fieldset>
+          <legend>Services Required</legend>
+          <label><input type="checkbox" name="services" value="packing" /> Packing</label>
+          <label><input type="checkbox" name="services" value="moving" /> Moving</label>
+          <label><input type="checkbox" name="services" value="design" /> Design</label>
+        </fieldset>
+        <div class="dialog-actions">
+          <button type="button" id="closeContact" class="btn secondary">Cancel</button>
+          <button type="submit" class="btn primary">Submit</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

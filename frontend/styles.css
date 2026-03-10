@@ -1,0 +1,168 @@
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --secondary: #dbeafe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--card);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.panel {
+  display: none;
+  background: var(--card);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.panel.active {
+  display: block;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.secondary {
+  background: var(--secondary);
+  color: #1e3a8a;
+}
+
+.auth-options {
+  display: grid;
+  gap: 1rem;
+  max-width: 650px;
+}
+
+.phone-auth {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+label,
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.4rem 0;
+}
+
+input {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.otp-row {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.dashboard {
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+}
+
+.dashboard.active {
+  display: grid;
+}
+
+.sidebar {
+  border-right: 1px solid #e5e7eb;
+  padding-right: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab {
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.35rem;
+}
+
+.tab.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+dialog {
+  border: none;
+  border-radius: 12px;
+  width: min(650px, 92vw);
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.35rem;
+}
+
+fieldset {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.7rem;
+}
+
+fieldset label {
+  flex-direction: row;
+  align-items: center;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+.error { color: #b91c1c; }
